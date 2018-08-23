@@ -1,11 +1,7 @@
-package interazione;
+package interazione.parte2.punto2;
 
 public class Main 
 {	
-	/**
-	 * Metodo main per l'esecuzione del software
-	 * @param args: i parametri del main
-	 */
 	public static void main(String[] args) 
 	{
 		LoadClass loadclass = new LoadClass();

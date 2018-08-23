@@ -1,4 +1,4 @@
-package interazione;
+package interazione.parte2.punto2;
 
 import java.io.Serializable;
 
@@ -6,26 +6,24 @@ import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.Period;
 
-import dominio.Categoria;
-import dominio.Risorsa;
-import dominio.SottoCategoria;
-import logica.AnagraficaFruitori;
-import logica.Archivio;
-import logica.ArchivioPrestiti;
-import logica.ArchivioStorico;
-import logica.Fruitore;
-import logica.Prestito;
-import logica.Utente;
-import utility.Costanti;
-import utility.InputDati;
+import dominio.parte2.punto2.Categoria;
+import dominio.parte2.punto2.Risorsa;
+import dominio.parte2.punto2.SottoCategoria;
+import logica.parte2.punto2.AnagraficaFruitori;
+import logica.parte2.punto2.Archivio;
+import logica.parte2.punto2.ArchivioPrestiti;
+import logica.parte2.punto2.ArchivioStorico;
+import logica.parte2.punto2.Fruitore;
+import logica.parte2.punto2.Prestito;
+import logica.parte2.punto2.Utente;
+import utility_2.Costanti;
+import utility_2.InputDati;
 
 public class ProcessFruitoreHandler extends ProcessHandler implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	
 	private AnagraficaFruitori af;
-    private Archivio arc;
-    private ArchivioPrestiti ap;
     private ArchivioStorico as;
     
     /**

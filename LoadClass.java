@@ -1,26 +1,27 @@
-package interazione;
+package interazione.parte2.punto2;
 
 import java.io.File;
 
-import logica.*;
-import utility.*;
+import logica.parte2.punto2.*;
+import utility_2.*;
 
 public class LoadClass 
 {
 	
-	 File gestoreRisorse = new File(Costanti.NOME_FILE);
+	 private File gestoreRisorse = new File(Costanti.NOME_FILE);
 	    
-	 RaccoltaDati rd = null;
-	 AnagraficaFruitori af = null;
-	 AnagraficaOperatori ao = null;
-	 Archivio arc = null;
-	 ArchivioPrestiti ap = null;
-	 ArchivioStorico as = null;
-
-	 boolean caricamentoRiuscito = false;
+	 private RaccoltaDati rd = null;
+	 private AnagraficaFruitori af = null;
+	 private AnagraficaOperatori ao = null;
+	 private Archivio arc = null;
+	 private ArchivioPrestiti ap = null;
+	 private ArchivioStorico as = null;
+	 
 		
 	 public void inizializza() 
 	 {
+		boolean caricamentoRiuscito = false;
+		 
 		if (gestoreRisorse.exists())
 		{
 			try 
