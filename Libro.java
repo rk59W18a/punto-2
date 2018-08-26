@@ -14,10 +14,6 @@ public class Libro extends Risorsa implements Serializable
     
     public static final String DESCRIZIONE_LIBRO = "Titolo: %s\n\t\tAutore/i: %s\n\t\tNumero pagine: %d\n\t\tAnno di pubblicazione: %d\n\t\tCasa editrice: %s\n\t\tLingua: %s\n\t\tGenere: %s\n\t\tNumero licenze: %d\n";
     
-    /**
-    * @pre: a != null
-    * @post: autore_i != null
-    */
     public Libro(String titolo, int licenze, String genere, int annoPub, String lingua, ArrayList <String> a, int np, String ce)
     {
     	 super(titolo, licenze, genere, annoPub, lingua);
@@ -45,9 +41,6 @@ public class Libro extends Risorsa implements Serializable
     	 return casaEditrice;
     }
     
-    /**
-     * @pre: autore_i != null
-     */
     public String toString()
     {
          StringBuffer ris = new StringBuffer();
@@ -56,5 +49,4 @@ public class Libro extends Risorsa implements Serializable
          ris.append(String.format(DESCRIZIONE_LIBRO, getTitolo(), aut, numPagine, getAnnoPub(), casaEditrice, getLingua(), getGenere(), getNumLicenze()));
          return ris.toString();
     }
-    
 }

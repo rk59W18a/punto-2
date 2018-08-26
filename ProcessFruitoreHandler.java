@@ -26,9 +26,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 	private AnagraficaFruitori af;
     private ArchivioStorico as;
     
-    /**
-     * @pre: (arc != null) && (ap != null) && (af != null) && (as != null)
-     */
     public ProcessFruitoreHandler(Archivio arc, ArchivioPrestiti ap, AnagraficaFruitori af, ArchivioStorico as)
     {
     	super(arc, ap);
@@ -36,9 +33,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
     	this.as = as;
     }
     
-	/**
-	 * @pre: (af != null) && (as != null)
-	 */
 	public void iscrizione()
 	{
 		String nome = "";
@@ -57,19 +51,8 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 		boolean ins_pwd = true;
 		boolean ins_data = true;
 		
-		/**
-		 * Ciclo globale per l'inserimento di un nuovo fruitore nel sistema in accordo con le condizioni indicate.
-		 * E' possibile suddividere tale ciclo in 4 parti:
-		 * 1 - Inserimento dei parametri richiesti
-		 * 2 - Controllo sulla correttezza lessicale della data di nascita inserita
-		 * 3 - Controlli sulle condizioni necessarie per l'iscrizione
-		 * 4 - Completamento iscrizione o richiesta di perfezionamento della stessa
-		 */
 	    do
 	    {
-	      	/**
-	    	 * Inserimento parametri
-	    	 */
 	      	if(ins_nome)
 	    	{
 				nome = InputDati.leggiStringaNonVuota(Costanti.INS_NOME);
@@ -94,11 +77,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 			boolean exc = false;			
 			end = true;
 			
-			/**
-			 * Il controllo per la correttezza della data di nascita inserita viene gestito autonomamente dalla classe LocalDate.
-			 * Nel caso in cui quest'ultima generi un'eccezione, e dunque la data inserita non sia lessicalmente corretta, viene modificata un'opportuna
-			 * variabile booleana che impedisce la fuoriuscita dal ciclo do-while fintanto che non viene digitata una data valida
-			 */
 			while(!exc) {
 			
 				try 
@@ -127,10 +105,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 			ins_pwd = false;
 			ins_data = false;
 
-			/**
-			 * I metodi di controllo verificano se un utente già iscritto cerca di iscriversi nuovamente, se non vi sono casi di condivisione di username
-			 * e se l'utente e' maggiorenne. In caso di inesattezze vengono reimpostati i parametri di inserimento e viene impedita la fuoriuscita dal ciclo globale
-			 */
 			if(af.verificaPresenza(f.getNome(), f.getCognome(), f.getDataDiNascita()))
 			{
 				System.out.println(Costanti.ISCRIZIONE_NON_OK_FRUITORE_GIA_ISCRITTO);
@@ -156,10 +130,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 				end = false;
 			}
 			
-			/**
-			 * Se non sono stati segnalati errori, l'iscrizione si conclude con successo.
-			 * Altrimenti, a meno che l'utente non esprima la volonta' di terminare l'operazione, si procede con le modifiche necessarie sui dati inseriti
-			 */
 			if(end)
 			{
 				af.aggiungiFruitore(f);
@@ -181,9 +151,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 	    
 	}
 	
-	/**
-	 * @pre: f != null
-	 */
 	public void rinnovaIscrizione(Fruitore f) 
 	{
 		if(f.rinnovaIscrizione())
@@ -193,7 +160,7 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
         }
 		else
 			System.out.println(Costanti.RINNOVO_NON_OK);
-	}
+	 }
 	
 	 public Utente accesso()
 	 {
@@ -227,18 +194,11 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
 		 return ut;
      }
 	
-	
-	/**
-	 * @pre: f != null
-	 */
 	public void visualizzaPrestitiInCorso(Fruitore f)
 	{
 		System.out.println(f.visualizzaPrestitiInCorso(ap));
 	}
 
-    /** 
-     * @pre: (f != null) && (arc != null) && (ap != null) && (arc.getElencoCategorie().size != 0) && (as != null)
-     */
     public void registraPrestito(Fruitore f) 
     {
     	 Categoria c = null;
@@ -318,9 +278,6 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
     	}	
     }
      
-    /**
-     * @pre: (f != null) && (ap != null) && (as != null)
-     */
     public void richiediProroga(Fruitore f) 
     { 
    	    if(ap.getPrestiti(f.getUsername()).size() != Costanti.VUOTO)
@@ -353,6 +310,5 @@ public class ProcessFruitoreHandler extends ProcessHandler implements Serializab
     {
  	    af.decadenzaFruitore(as);
         ap.scadenzaPrestito();
-    }
-    
+    }  
 }

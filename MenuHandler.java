@@ -229,6 +229,5 @@ public class MenuHandler implements Serializable
        }while(!esci);   
        
        System.out.println(Costanti.SALUTO_FINALE);       
-    }
-     
+    }   
 }

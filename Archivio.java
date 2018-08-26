@@ -15,9 +15,6 @@ public class Archivio implements Serializable
 	
 	public static final String DESCRIZIONE_ARCHIVIO = "\nL'archivio presenta il seguente contenuto:\n";
 	
-	/**
-	 * @post: elencoCategorie != null
-	 */
 	public Archivio()
 	{
 		elencoCategorie = new ArrayList <Categoria> ();
@@ -28,18 +25,11 @@ public class Archivio implements Serializable
 		return elencoCategorie;
 	}
 		
-	/**
-	 * @pre: c != null
-	 * @post: elencoCategorie.contains(c)
-	 */
 	public void aggiungiCategoria(Categoria c)
 	{
 		elencoCategorie.add(c);
 	}
 	
-	/**
-	 * @pre: elencoCategorie != null
-	 */
 	public String stampaElencoCategorie()
 	{
 		StringBuffer ris = new StringBuffer();
@@ -53,9 +43,6 @@ public class Archivio implements Serializable
 	    return ris.toString();
 	}
 	
-	/**
-     * @pre: elencoCategorie != null
-     */
 	public String toString()
 	{
 		StringBuffer ris = new StringBuffer();
@@ -68,6 +55,5 @@ public class Archivio implements Serializable
 		}
 		
 		return ris.toString();
-	}
-	
+	}	
 }

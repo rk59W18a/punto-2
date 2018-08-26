@@ -15,9 +15,6 @@ public class RaccoltaDati implements Serializable
     private ArchivioPrestiti ap;
     private ArchivioStorico as;
     
-    /**
-     * @pre: (af != null) && (ao != null) && (arc != null) && (ap != null) && (aStorico != null)
-     */
     public RaccoltaDati(AnagraficaFruitori af, AnagraficaOperatori ao, Archivio arc, ArchivioPrestiti ap, ArchivioStorico aStorico)
     {
     	   this.af = af;
@@ -50,6 +47,5 @@ public class RaccoltaDati implements Serializable
     public ArchivioStorico getArchivioStorico()
     {
     	    return as;
-    }
-    
+    }  
 }

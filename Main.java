@@ -14,6 +14,5 @@ public class Main
 		gestore.logicaMenu(processOperatore,processFruitore);
 
 		loadclass.salva();
-	}
-	
+	}	
 }

@@ -21,10 +21,7 @@ public class Fruitore extends Utente implements Serializable
     public static final String FORMATO_DATA = "dd/MM/yyyy";
     public static final String NO_PRESTITI_ATTIVI = "Al momento non ci sono prestiti\n";
     public static final String PRESTITI_ATTIVI = "Elenco dei prestiti attivi:\n";
-    
-    /** 
-     * @post : dataDiScadenza == dataDiIscrizione.plusYears(TERMINE_SCADENZA)
-     */     
+        
     public Fruitore(String n, String c, int an, int mn, int gn, String u, String p)
     {
    	     super(n, c, u, p);
@@ -48,10 +45,6 @@ public class Fruitore extends Utente implements Serializable
    	     return dataDiScadenza;
     }
     
-    /** 
-     * @pre : nuovads.isAfter(dataDiScadenza)
-     * @post : dataDiScadenza == nuovads.plusYears(TERMINE_SCADENZA)
-     */
     public void setDataDiScadenza(LocalDate nuovads)
     {
    	 	dataDiScadenza = nuovads;
@@ -73,9 +66,6 @@ public class Fruitore extends Utente implements Serializable
 		 return false;
     }
     
-    /**
-     * @pre: ap != null
-     */
     public String visualizzaPrestitiInCorso(ArchivioPrestiti ap)
     {
     	ArrayList <Prestito> ris = new ArrayList <Prestito> ();
@@ -97,18 +87,11 @@ public class Fruitore extends Utente implements Serializable
       	return r.toString();
     }
     
-    /**
-     * @pre: (ap != null) && (p != null)
-     * @post: p in ap
-     */
     public void registraNuovoPrestito(ArchivioPrestiti ap, Prestito p)
     {
       	ap.aggiungiPrestito(p);
     }
-    
-   /**
-    * @pre: p != null
-    */
+   
     public boolean registraProrogaPrestito(Prestito p)
     {
     	return p.prorogaPrestito();
@@ -121,6 +104,5 @@ public class Fruitore extends Utente implements Serializable
     	    
       	ris.append(String.format(DESCRIZIONE_FRUITORE, getNome(), getCognome(), getUsername(), getPassword(), dataDiNascita.format(formatter), dataDiIscrizione.format(formatter), dataDiScadenza.format(formatter)));
         return ris.toString();
-    } 
-    
+    }    
 }

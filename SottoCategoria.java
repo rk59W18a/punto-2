@@ -11,10 +11,7 @@ public class SottoCategoria extends Categoria implements Serializable
     public static final String DESCRIZIONE_SOTTOCATEGORIA = "Nome sottocategoria: %s\n\t";
     public static final String ELENCO_RISORSE_VUOTO = "Al momento non sono presenti risorse\n";
     public static final String INTESTAZIONE_RISORSE = "Risorse in essa contenute:\n";
-    
-   /**
-    * @post: elencoRisorse != null
-    */
+   
     public SottoCategoria(String ns)
     {
     	    super();
@@ -27,9 +24,6 @@ public class SottoCategoria extends Categoria implements Serializable
     	    return nomeSottoC;
     }
     
-    /**
-     * @pre: elencoRisorse != null
-     */
     public String toString()
     {
  	   StringBuffer ris = new StringBuffer();
@@ -49,6 +43,5 @@ public class SottoCategoria extends Categoria implements Serializable
  	   }
  	   
  	   return ris.toString();
-    }
-    
+    } 
 }

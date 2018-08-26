@@ -12,8 +12,7 @@ public abstract class Risorsa implements Serializable
 	private String genere;
 	private int annoPub;
 	private String lingua;
-    
-
+   
     public Risorsa(String t, int lic, String g, int ap, String l)
     {
     	 this.titolo = t;
@@ -48,6 +47,5 @@ public abstract class Risorsa implements Serializable
     	 return lingua;
     }
     
-    public abstract String toString();
-    
+    public abstract String toString();  
 }

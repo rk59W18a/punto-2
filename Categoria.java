@@ -3,9 +3,6 @@ package dominio.parte2.punto2;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * @invariant: (elencoRisorse == null) || (elencoSottoCategorie == null)
- */
 public class Categoria implements Serializable
 {
 	   private static final long serialVersionUID = 1L;
@@ -47,17 +44,11 @@ public class Categoria implements Serializable
 		   
 	   }
 	   
-	   /**
-	    * @post: elencoRisorse != null
-	    */
 	   public void inizializzaElencoRisorse()
 	   {
 		   elencoRisorse = new ArrayList <Risorsa> ();
 	   }
 	   
-	   /**
-	    * @post: elencoSottoCategorie != null
-	    */
 	   public void inizializzaElencoSottoCategorie()
 	   {
 		   elencoSottoCategorie = new ArrayList <SottoCategoria> ();
@@ -98,9 +89,6 @@ public class Categoria implements Serializable
 		   return elencoSottoCategorie;
 	   }
 	   
-	   /**
-	    * @pre: elencoRisorse != null
-	    */
 	   public Risorsa getRisorsa(String t)
 	   {
 		   for(int i = 0; i < elencoRisorse.size(); i++)
@@ -113,40 +101,22 @@ public class Categoria implements Serializable
 		   return null;
 	   }
 	    
-	   /**
-	    * @pre: (r != null) && !(elencoRisorse.contains(r))
-	    * @post: elencoRisorse.contains(r)
-	    */
 	   public void aggiungiRisorsa(Risorsa r)  
 	   {
 		   elencoRisorse.add(r);
 	   }
 	   
-	   /**
-	    * @pre: (r != null) && (elencoRisorse.contains(r))
-	    * @post: !(elencoRisorse.contains(r))
-	    */
 	   public void rimuoviRisorsa(Risorsa r)  
 	   {
 		   elencoRisorse.remove(r);
 		   
 	   }
 	   
-	   /**
-	    * @pre: sc != null
-	    * @post: elencoSottoCategorie.contains(sc)
-	    */
 	   public void aggiungiSottoCategoria(SottoCategoria sc)
 	   {
 		   elencoSottoCategorie.add(sc);
 	   }
 	   
-	   /**
-	    * Metodo che dato una stringa t che rappresenta il titolo della nuova risorsa da inserire in archivio, verifica 
-	    * se all'interno della categoria associata alla nuova risorsa sia già presente una risorsa con lo stesso titolo
-	    * 
-	    * @pre: elencoSottoCategorie != null  && elencoRisorse != null
-	    */
 	   public boolean verificaPresenza(String t)
 	   {
 		  boolean presente = false;
@@ -169,15 +139,6 @@ public class Categoria implements Serializable
 		   return presente;
 	   }
 	 
-	   /**
-	    * Metodo per la ricerca delle risorse all'interno dell'elenco delle risorse
-	    * 
-	    * @pre: o != null
-	    * 
-	    * @param o: il generico oggetto che rappresenta quello che l'utente ha digitato con lo scopo di cercarlo nella categoria
-	    * @param cr: stringa che specifica in base a quale parametro avviene la ricerca
-	    * @return il vettore con all'interno le risorse che hanno soddisfatto la ricerca
-	    */
 	   public ArrayList <Risorsa> ricercaRisorsaInElenco(Object o, String cr)
 	   {
 		   ArrayList <Risorsa> risorseCercate = new ArrayList <>();
@@ -221,16 +182,6 @@ public class Categoria implements Serializable
 	   	    return risorseCercate;
 	   }
 	   
-	   /**
-	    * Metodo per la ricerca di risorse all'interno della categoria oppure all'interno
-	    * delle varie sottocategorie della categoria, se presenti
-	    * 
-	    * @pre: o != null
-	    * 
-	    * @param o: il generico oggetto che rappresenta quello che l'utente ha digitato con lo scopo di cercarlo nella categoria
-	    * @param comeRicercare: stringa che specifica in base a quale parametro avviene la ricerca
-	    * @return il vettore con all'interno le risorse che hanno soddisfatto la ricerca
-	    */
 	   public ArrayList <Risorsa> ricercaRisorsa(Object o, String comeRicercare)
 	   {
 		   ArrayList <Risorsa> risorseCercate = new ArrayList <>();
@@ -251,9 +202,6 @@ public class Categoria implements Serializable
 		   return risorseCercate;
 	   }
 	  
-	   /**
-	    * @pre: elencoRisorse != null
-	    */
 	   public String stampaElencoRisorse()
 	   {
 	      StringBuffer ris = new StringBuffer();
@@ -267,9 +215,6 @@ public class Categoria implements Serializable
 	 	   return ris.toString();
 	   }
 	   
-	   /**
-	    * @pre: elencoSottoCategorie != null
-	    */
 	   public String stampaElencoSottocategorie()
 	   {
 		   StringBuffer ris = new StringBuffer();
@@ -282,7 +227,6 @@ public class Categoria implements Serializable
 		   
 		   return ris.toString();
 	   }
-	   
 	   
 	   public String toString()
 	   {
@@ -320,6 +264,5 @@ public class Categoria implements Serializable
 		    }
 		   
 		   return ris.toString();
-	   }
-	   
+	   }	   
 }

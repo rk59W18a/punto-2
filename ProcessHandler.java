@@ -19,9 +19,6 @@ public abstract class ProcessHandler implements Serializable
 	protected Archivio arc;
     protected ArchivioPrestiti ap;
     
-    /**
-     * @pre: (arc != null) && (ap != null) 
-     */
     public ProcessHandler(Archivio arc, ArchivioPrestiti ap)
     {  
     	this.arc = arc;
@@ -30,9 +27,6 @@ public abstract class ProcessHandler implements Serializable
 
     public abstract Utente accesso();
   
-    /**
-     * @pre: (ut != null) && (arc != null) && (arc.getElencoCategorie().size != 0)
-     */
     public ArrayList <Risorsa> ricercaRisorsa(Utente ut)
     {
        	Categoria c = null;
@@ -50,9 +44,6 @@ public abstract class ProcessHandler implements Serializable
    	 		return null;
     }
     
-    /**
-     * @pre: (ut != null) && (c != null)
-     */
     public ArrayList <Risorsa> ricercaRisorsaLibri(Utente ut, Categoria c)
     {
    	    int numScelta = InputDati.leggiIntero(Costanti.AVVIO_RICERCA_LIBRI, Costanti.NUM_MINIMO, Costanti.NUM_MASSIMO_RICERCA);
@@ -85,9 +76,6 @@ public abstract class ProcessHandler implements Serializable
    	    return ut.ricercaRisorsa(c, o, s);
     }
    
-    /** 
-     * @pre: (ut != null) && (c != null)
-     */
     public ArrayList <Risorsa> ricercaRisorsaFilm(Utente ut, Categoria c)
     {
    	    int numScelta = InputDati.leggiIntero(Costanti.AVVIO_RICERCA_FILM, Costanti.NUM_MINIMO, Costanti.NUM_MASSIMO_RICERCA);
@@ -120,14 +108,6 @@ public abstract class ProcessHandler implements Serializable
    	    return ut.ricercaRisorsa(c, o, s);
     }
     
-   /**
-    * Metodo per la creazione di una stringa descrittiva delle risorse che sono state trovate mediante 
-    * una ricerca
-    * 
-    * @pre: elencoRisorse != null
-    * 
-    * @param elencoRisorse: il vettore contenente le risorse, risultato dalla ricerca, da stampare
-    */
    public String ricercaRisorsaFormatoStringa(ArrayList <Risorsa> elencoRisorse)
    {
   	    StringBuffer ris = new StringBuffer();
@@ -145,9 +125,6 @@ public abstract class ProcessHandler implements Serializable
 		return ris.toString();
    }
    
-   /**
-    * @pre: (ut != null) && (arc != null) && (ap != null)
-    */
    public String valutazioneDisponibilita(Utente ut)
    {
      	ArrayList <Risorsa> risorseTrovate = ricercaRisorsa(ut);
@@ -177,5 +154,4 @@ public abstract class ProcessHandler implements Serializable
       	else
     		     return false;
    }
-    
 }

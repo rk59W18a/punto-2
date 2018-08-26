@@ -20,11 +20,7 @@ public class Prestito implements Serializable
 	private LocalDate dataProrogaEffettuata;
 	
 	public static final String DESCRIZIONE_PRESTITO = "Categoria della risorsa in prestito: %s\nRisorsa presa in prestito:\n\t\t%s\nData inizio prestito:%s\nData scadenza prestito: %s\nProroga già effettuata: %s\n";
-		
-	/**
-	 * @pre: (c != null) && (f != null) && (r != null)
-	 * @post: dataDiScadenzaPrestito == dataDiInizioPrestito.plusDays(categoriaAssociata.getNumeroMaxGiorniPrestito())
-	 */
+	
 	public Prestito(Categoria c, Fruitore f, Risorsa r)
 	{
 		this.dataDiInizioPrestito = LocalDate.now();
@@ -112,6 +108,5 @@ public class Prestito implements Serializable
   	    ris.append(String.format(DESCRIZIONE_PRESTITO, categoriaAssociata.getNome(), risorsaInPrestito.toString(), dataDiInizioPrestito.format(formatter), dataDiScadenzaPrestito.format(formatter), perProroga));
         return ris.toString();
 
-    } 
-    
+    }  
 }

@@ -15,7 +15,6 @@ public class Utente implements Serializable
     private String username;
     private String password;
     
-    
     public Utente(String n, String c, String u, String p)
     {
     	this.nome = n;
@@ -43,25 +42,12 @@ public class Utente implements Serializable
     {
     	 return password; 
     }
-    
-    /**
-     * Metodo che permette all'utente di effettuare la ricerca di una risorsa in base alla categoria 
-     * 
-     * @pre: (c != null) && (o != null)
-     * 
-     * @param c: la categoria delle risorse da cercare
-     * @param o: il generico oggetto che rappresenta quello che l'utente ha digitato con lo scopo di cercarlo nella categoria
-     * @param r: stringa che specifica in base a quale parametro avviene la ricerca
-     * @return il vettore con all'interno le risorse che hanno soddisfatto la ricerca
-     */
+   
     public ArrayList <Risorsa> ricercaRisorsa(Categoria c, Object o, String r)
     {
        	 return c.ricercaRisorsa(o, r);
     }
     
-    /**
-     * @pre: (ap != null) && (r != null)
-     */
     public boolean valutazioneDisponibilita(ArchivioPrestiti ap, Risorsa r)
     {
          return	ap.controlloDisponibilitaRisorsa(r);

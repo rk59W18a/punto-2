@@ -11,7 +11,6 @@ public class Anagrafica implements Serializable
 	
 	protected ArrayList <Utente> elenco;
     
-
     public Anagrafica()
     {
     	   elenco = new ArrayList <Utente> ();
@@ -22,9 +21,6 @@ public class Anagrafica implements Serializable
     	   return elenco;
     }
     
-    /**
-     * @pre: elenco != null
-     */
     public Utente getUtente(String u, String p)
     {
       	for(int i = 0; i < elenco.size(); i++)
@@ -38,9 +34,6 @@ public class Anagrafica implements Serializable
 	    return null;
     }
     
-    /** 
-     * @pre : elenco != null
-     */
     public boolean accedi(String u, String p)
     {
     	    for(int i = 0; i < elenco.size(); i++)
@@ -52,6 +45,5 @@ public class Anagrafica implements Serializable
     	    }
     	    
     	    return false;
-    }
-    
+    }   
 }

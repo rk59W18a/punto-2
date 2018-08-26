@@ -19,11 +19,6 @@ public class ArchivioStorico implements Serializable
     private ArchivioPrestiti prestitiConProrogheStoriche;
 	private ArrayList <Risorsa> elencoRisorseRimosse;
 	
-	/**
-	 * @post: (iscrizioniFruitoriStoriche != null) && (rinnovoIscrizioniFruitoriStorici != null)
-	 *        && (decadenzeFruitoriStoriche != null) && (prestitiStorici != null) 
-	 *        && (prestitiConProrogheStoriche != null) && (elencoRisorseRimosse != null)
-	 */
 	public ArchivioStorico()
 	{
 		iscrizioniFruitoriStoriche = new AnagraficaFruitori();
@@ -64,18 +59,11 @@ public class ArchivioStorico implements Serializable
       	return elencoRisorseRimosse;
     }
 	
-    /**
-     * @pre: (r != null) && (elencoRisorseRimosse != null)
-     * @post: elencoRisorseRimosse.contains(r)
-     */
 	public void aggiungiRisorsaRimossa(Risorsa r)
 	{
 		elencoRisorseRimosse.add(r);
 	}
 	
-	/**
-	 * @pre: prestitiStorici != null
-	 */
     public int numeroPrestitiPerAnno(int a)
     {
     	   int num = 0;
@@ -91,9 +79,6 @@ public class ArchivioStorico implements Serializable
     	   return num;
     }
     
-    /** 
-	 * @pre: prestitiConProrogheStoriche != null
-	 */
     public int numeroProroghePerAnno(int a)
     {
     	   int num = 0;
@@ -112,9 +97,6 @@ public class ArchivioStorico implements Serializable
     	   return num;
     }
 	
-    /**
-     * @pre: prestitiStorici != null
-     */
 	public String getRisorsaPiuRichiesta(int a)
 	{
 		Risorsa ris = null;
@@ -163,9 +145,6 @@ public class ArchivioStorico implements Serializable
 			return "";
 	}
 	
-	/**
-     * @pre: (prestitiStorici != null) && (f != null)
-     */
 	public int numeroPrestitiPerFruitorePerAnno(Fruitore f, int a)
 	{
 	    	int num = 0;
@@ -180,5 +159,4 @@ public class ArchivioStorico implements Serializable
 	    	   
 	    	return num;
 	 }
-	
 }
