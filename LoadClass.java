@@ -1,12 +1,15 @@
 package interazione.parte2.punto2;
 
 import java.io.File;
+import java.io.Serializable;
 
 import logica.parte2.punto2.*;
-import utility_2.*;
+import utility.parte2.*;
 
-public class LoadClass 
+public class LoadClass implements Serializable
 {
+	 private static final long serialVersionUID = 1L;
+
 	 private File gestoreRisorse = new File(Costanti.NOME_FILE);
 	    
 	 private RaccoltaDati rd;
