@@ -1,12 +1,10 @@
-package interazione_5;
+package interazione.parte2.punto2;
 
 import java.io.Serializable;
 
-import logica_5.*;
+import logica.parte2.punto2.*;
 
-/**
- * Questa classe rappresenta un raccoglitore di dati, utile per la memorizzazione su file
- */
+
 public class RaccoltaDati implements Serializable
 {
 	private static final long serialVersionUID = 1L;
@@ -17,17 +15,6 @@ public class RaccoltaDati implements Serializable
     private ArchivioPrestiti ap;
     private ArchivioStorico as;
     
-    /**
-    * Metodo costruttore della classe RaccoltaDati
-    * 
-    * @pre: (af != null) && (ao != null) && (arc != null) && (ap != null) && (as != null)
-    * 
-    * @param af: anagrafica fruitori
-    * @param ao: anagrafica operatori
-    * @param arc: archivio risorse
-    * @param ap: archivio prestiti
-    * @param aStorico: archivio storico
-     */
     public RaccoltaDati(AnagraficaFruitori af, AnagraficaOperatori ao, Archivio arc, ArchivioPrestiti ap, ArchivioStorico aStorico)
     {
     	   this.af = af;
@@ -37,10 +24,6 @@ public class RaccoltaDati implements Serializable
     	   this.as = aStorico;
     }
     
-    /**
-     * Metodi get della classe RaccoltaDati
-     * @return i vari attributi della classe RaccoltaDati
-     */
     public AnagraficaFruitori getAnagraficaFruitori()
 	{
 		return af;
@@ -63,7 +46,6 @@ public class RaccoltaDati implements Serializable
     
     public ArchivioStorico getArchivioStorico()
     {
-    	return as;
-    }
-    
+    	    return as;
+    }  
 }

@@ -1,28 +1,18 @@
-package interazione_5;
-
-import java.io.File;
+package interazione.parte2.punto2;
 
 public class Main 
-{
-
-	/**
-	 * Metodo main per l'esecuzione del software
-	 * @param args: i parametri del main
-	 */
+{	
 	public static void main(String[] args) 
 	{
 		LoadClass loadclass = new LoadClass();
 		loadclass.inizializza();
 		
-		//Processi processi = new Processi();	processi.inizializza();
+		ProcessOperatoreHandler processOperatore = new ProcessOperatoreHandler(loadclass.getArchivio(), loadclass.getArchivioPrestiti(), loadclass.getAnagraficaFruitori(), loadclass.getAnagraficaOperatori(), loadclass.getArchivioStorico());  
+        ProcessFruitoreHandler processFruitore = new ProcessFruitoreHandler(loadclass.getArchivio(), loadclass.getArchivioPrestiti(), loadclass.getAnagraficaFruitori(), loadclass.getArchivioStorico());    
 		
-		/**
-		 * Viene costruito un nuovo gestore menu' che possa dare avvio alla logica del sistema applicativo 
-		 */
-		GestoreMenu gestore = new GestoreMenu();
-		gestore.logicaMenu(processi);
+		MenuHandler gestore = new MenuHandler();
+		gestore.logicaMenu(processOperatore,processFruitore);
 
 		loadclass.salva();
-	}
-	
+	}	
 }
