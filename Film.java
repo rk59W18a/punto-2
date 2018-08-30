@@ -3,7 +3,6 @@ package dominio.parte2.punto2;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
 public class Film extends Risorsa implements Serializable
 {
 	private static final long serialVersionUID = 1L;

@@ -5,8 +5,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import dominio.parte2.punto2.*;
-import utility_2.Costanti;
-
+import utility.parte2.Costanti;
 
 public class ArchivioStorico implements Serializable
 {

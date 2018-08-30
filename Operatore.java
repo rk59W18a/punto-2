@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import dominio.parte2.punto2.*;
 
-
 public class Operatore extends Utente implements Serializable
 {
 	private static final long serialVersionUID = 1L;

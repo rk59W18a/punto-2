@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import logica.parte2.punto2.*;
 
-
 public class RaccoltaDati implements Serializable
 {
 	private static final long serialVersionUID = 1L;

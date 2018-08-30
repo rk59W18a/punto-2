@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 import dominio.parte2.punto2.*;
 
-
 public class Archivio implements Serializable
 {  
 	private static final long serialVersionUID = 1L;

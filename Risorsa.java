@@ -2,7 +2,6 @@ package dominio.parte2.punto2;
 
 import java.io.Serializable;
 
-
 public abstract class Risorsa implements Serializable
 {
 	private static final long serialVersionUID = 1L;

@@ -6,7 +6,6 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-
 public class Fruitore extends Utente implements Serializable
 {
     private static final long serialVersionUID = 1L;

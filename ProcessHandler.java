@@ -9,8 +9,8 @@ import dominio.parte2.punto2.Risorsa;
 import logica.parte2.punto2.Archivio;
 import logica.parte2.punto2.ArchivioPrestiti;
 import logica.parte2.punto2.Utente;
-import utility_2.Costanti;
-import utility_2.InputDati;
+import utility.parte2.Costanti;
+import utility.parte2.InputDati;
 
 public abstract class ProcessHandler implements Serializable
 {  

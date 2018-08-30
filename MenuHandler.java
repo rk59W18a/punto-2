@@ -1,9 +1,8 @@
 package interazione.parte2.punto2;
 
 import java.io.Serializable;
-
 import logica.parte2.punto2.*;
-import utility_2.*;
+import utility.parte2.*;
 
 public class MenuHandler implements Serializable
 {
