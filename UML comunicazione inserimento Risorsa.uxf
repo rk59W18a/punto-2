@@ -111,30 +111,20 @@ valign=center</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Per Indirection</panel_attributes>
+    <panel_attributes>Per Indirection
+per Controller</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>330</y>
-      <w>30</w>
-      <h>100</h>
+      <x>100</x>
+      <y>350</y>
+      <w>100</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=.()</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>300</x>
-      <y>160</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Per Information Expert</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>80.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -168,16 +158,5 @@ valign=center</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>40.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>370</x>
-      <y>190</y>
-      <w>30</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=.()</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
 </diagram>
