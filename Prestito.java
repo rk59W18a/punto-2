@@ -1,11 +1,11 @@
 package logica.parte2.punto2;
 
 import java.io.Serializable;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import dominio.parte2.punto2.*;
+import dominio.parte2.punto2.Categoria;
+import dominio.parte2.punto2.Risorsa;
 
 public class Prestito implements Serializable
 {

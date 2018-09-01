@@ -1,8 +1,7 @@
 package logica.parte2.punto2;
 
 import java.io.Serializable;
-
-import java.util.*;
+import java.util.ArrayList;
 
 
 public class Anagrafica implements Serializable

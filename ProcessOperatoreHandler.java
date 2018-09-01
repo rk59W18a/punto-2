@@ -1,7 +1,6 @@
 package interazione.parte2.punto2;
 
 import java.io.Serializable;
-
 import java.time.LocalDate;
 
 import dominio.parte2.punto2.Categoria;
@@ -221,7 +220,7 @@ public class ProcessOperatoreHandler extends ProcessHandler implements Serializa
      
      public String sceltaInterrogazione(Operatore o)
      {
-  	    int numScelta = InputDati.leggiIntero(Costanti.SCELTA_INTERROGAZIONE, Costanti.NUM_MINIMO, Costanti.NUM_MASSIMO_RICERCA);
+  	    int numScelta = InputDati.leggiIntero(Costanti.SCELTA_INTERROGAZIONE, Costanti.NUM_MINIMO, Costanti.NUM_MASSIMO_SCELTA_INTERROGAZIONE);
   	    int anno = 0;
   	    Fruitore f = null;
   	    String s1 = "";

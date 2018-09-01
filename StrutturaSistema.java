@@ -1,11 +1,15 @@
 package interazione.parte2.punto2;
 
 import java.io.Serializable;
-
 import java.util.ArrayList;
 
-import dominio.parte2.punto2.*;
-import logica.parte2.punto2.*;
+import dominio.parte2.punto2.Categoria;
+import dominio.parte2.punto2.Film;
+import dominio.parte2.punto2.Libro;
+import dominio.parte2.punto2.SottoCategoria;
+import logica.parte2.punto2.AnagraficaOperatori;
+import logica.parte2.punto2.Archivio;
+import logica.parte2.punto2.Operatore;
 
 
 public class StrutturaSistema implements Serializable

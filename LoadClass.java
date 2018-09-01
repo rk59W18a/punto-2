@@ -3,8 +3,13 @@ package interazione.parte2.punto2;
 import java.io.File;
 import java.io.Serializable;
 
-import logica.parte2.punto2.*;
-import utility.parte2.*;
+import logica.parte2.punto2.AnagraficaFruitori;
+import logica.parte2.punto2.AnagraficaOperatori;
+import logica.parte2.punto2.Archivio;
+import logica.parte2.punto2.ArchivioPrestiti;
+import logica.parte2.punto2.ArchivioStorico;
+import utility.parte2.Costanti;
+import utility.parte2.ServizioFile;
 
 public class LoadClass implements Serializable
 {

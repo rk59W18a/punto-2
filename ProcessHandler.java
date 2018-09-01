@@ -1,7 +1,6 @@
 package interazione.parte2.punto2;
 
 import java.io.Serializable;
-
 import java.util.ArrayList;
 
 import dominio.parte2.punto2.Categoria;
