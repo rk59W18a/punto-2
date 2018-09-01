@@ -16,12 +16,12 @@
     <id>Relation</id>
     <coordinates>
       <x>950</x>
-      <y>270</y>
+      <y>260</y>
       <w>30</w>
-      <h>490</h>
+      <h>500</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;470.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;480.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -55,7 +55,7 @@
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-iscrizione(af,as)</panel_attributes>
+iscrizione()</panel_attributes>
     <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>

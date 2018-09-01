@@ -119,7 +119,7 @@ halign=left
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-ricercaRisorsaLibro</panel_attributes>
+ricercaRisorsaLibri(ut, c)</panel_attributes>
     <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -154,7 +154,7 @@ Libro/i</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-ricercaRisorsaFilm</panel_attributes>
+ricercaRisorsaFilm(ut, c)</panel_attributes>
     <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
